@@ -1,3 +1,10 @@
-export function App() {
-  return <div>MilkHunters</div>;
-}
+import { AppProvider } from './providers';
+import { AppRoutes } from './routes';
+
+export const App = () => {
+  return (
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
+  );
+};
