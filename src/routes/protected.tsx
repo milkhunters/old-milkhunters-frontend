@@ -3,8 +3,8 @@ import { SandboxRoutes } from '@/modules/sandbox';
 
 export const protectedRoutes = [
   {
-    path: '/',
+    path: 'sandbox/',
     element: <MainLayout />,
-    children: [{ path: '/sandbox/*', element: <SandboxRoutes /> }],
+    children: [{ path: '*', element: <SandboxRoutes /> }],
   },
 ];
