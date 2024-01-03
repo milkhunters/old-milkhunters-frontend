@@ -130,7 +130,8 @@ const Header = () => {
       </Box>
 
       <Box sx={{ display: { xs: 'block', md: 'none', lg: 'none' } }}>
-        <IconButton variant="outlined" color="neutral" onClick={drawerOpen}>
+        <ColorShemeToggle />
+        <IconButton sx={{ ml: '1em' }} variant="outlined" color="neutral" onClick={drawerOpen}>
           <Menu />
         </IconButton>
         <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="top">
