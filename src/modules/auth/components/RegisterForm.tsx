@@ -1,8 +1,3 @@
-interface RegisterProps {
-  onSuccess: () => void;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const RegisterForm = ({ onSuccess }: RegisterProps) => {
+export const RegisterForm = () => {
   return <div>RegisterForm</div>;
 };

@@ -1,8 +1,3 @@
-interface ConfirmEmailProps {
-  onSuccess: () => void;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const ConfirmEmailForm = ({ onSuccess }: ConfirmEmailProps) => {
+export const ConfirmEmailForm = () => {
   return <div>ConfirmEmailForm</div>;
 };

@@ -1,8 +1,3 @@
-type LoginFormProps = {
-  onSuccess: () => void;
-};
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const LoginForm = ({ onSuccess }: LoginFormProps) => {
+export const LoginForm = () => {
   return <div>LoginForm</div>;
 };

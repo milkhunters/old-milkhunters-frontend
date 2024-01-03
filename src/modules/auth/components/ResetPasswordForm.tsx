@@ -1,8 +1,3 @@
-interface ResetPasswordProps {
-  onSuccess: () => void;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const ResetPasswordForm = ({ onSuccess }: ResetPasswordProps) => {
+export const ResetPasswordForm = () => {
   return <div>ResetPasswordForm</div>;
 };
