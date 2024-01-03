@@ -5,6 +5,7 @@ export default extendTheme({
   colorSchemes: {
     light: {
       palette: {
+        background: {},
         primary: {
           50: '#eaeafd',
           100: '#cbc9f8',
@@ -17,10 +18,17 @@ export default extendTheme({
           800: '#3923c1',
           900: '#2b00b0',
         },
+        text: {
+          primary: '#4e46e5',
+          secondary: '#000e5c',
+        },
       },
     },
     dark: {
       palette: {
+        background: {
+          body: '#1c1c1d',
+        },
         primary: {
           50: '#eaeafd',
           100: '#cbc9f8',
