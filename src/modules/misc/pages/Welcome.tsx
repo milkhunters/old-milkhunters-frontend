@@ -27,7 +27,6 @@ const TwoSidedLayout = ({
         [theme.breakpoints.up(1200)]: {
           gap: 12,
         },
-      
       })}
     >
       <Box
@@ -67,7 +66,7 @@ const TwoSidedLayout = ({
         })}
       >
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D"
+          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXQlMjB0ZWFtfGVufDB8fDB8fHww"
           alt=""
         />
       </AspectRatio>

@@ -39,11 +39,8 @@ const ColorShemeToggle = () => {
       variant="soft"
       color="primary"
       onClick={() => {
-        if (mode === 'light') {
-          setMode('dark');
-        } else {
-          setMode('light');
-        }
+        if (mode === 'light') setMode('dark');
+        else setMode('light');
       }}
       sx={{
         borderRadius: '50%',
