@@ -200,15 +200,7 @@ export const MainLayout = () => {
     >
       <Header />
       <Divider />
-      <Box
-        sx={{
-          width: { xs: '95%', md: '95%', lg: '1200px' },
-          height: '100%',
-          margin: '0 auto',
-        }}
-      >
-        <Outlet></Outlet>
-      </Box>
+      <Outlet />
       <Divider />
       <Footer />
     </Box>
