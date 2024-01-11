@@ -192,7 +192,7 @@ export const Team = () => {
             </Box>
             <Divider component="div" sx={{ my: 2 }} />
             <List sx={{ '--ListItemDecorator-size': '40px', gap: 2 }}>
-              {person.companyData.map((company, companyIndex) => (
+              {person.companyData?.map((company, companyIndex) => (
                 <ListItem key={companyIndex} sx={{ alignItems: 'flex-start' }}>
                   <ListItemDecorator
                     sx={{
