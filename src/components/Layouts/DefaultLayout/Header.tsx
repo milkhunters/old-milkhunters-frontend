@@ -116,7 +116,7 @@ export const Header = () => {
         <IconButton sx={{ ml: '1em' }} color="primary" onClick={drawerOpen}>
           <Menu />
         </IconButton>
-        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="left">
+        <Drawer size="md" open={isDrawer} onClose={drawerClose} anchor="left">
           <Box
             sx={{
               display: 'flex',
@@ -153,10 +153,10 @@ export const Header = () => {
                         </ListItemDecorator>
                         <ListItemContent
                           sx={{
-                            py: 0.72,
+                            py: 1,
                             fontSize: 'lg',
                             fontWeight: 'md',
-                            letterSpacing: '-0.03em',
+                            letterSpacing: '-0.01em',
                           }}
                         >
                           {item.name}

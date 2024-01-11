@@ -7,7 +7,7 @@ export const Logo = () => {
       <Typography
         sx={{
           dislplay: 'flex',
-          fontSize: { xs: 'xl', md: '25px', lg: '27px' },
+          fontSize: { xs: '23px', md: '25px', lg: '27px' },
           color: 'text.secondary',
           fontWeight: '600',
           fontFamily: 'Poppins',
