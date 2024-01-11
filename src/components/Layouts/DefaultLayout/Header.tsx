@@ -6,8 +6,6 @@ import {
   List,
   ListItem,
   ListItemButton,
-  Stack,
-  Button,
   IconButton,
   Drawer,
   ModalClose,
@@ -101,15 +99,7 @@ export const Header = () => {
         </List>
       </Box>
 
-      <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'flex' } }}>
-        <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
-          <ColorShemeToggle />
-          <Button variant="outlined" sx={{ borderRadius: 'lg' }}>
-            Войти
-          </Button>
-          <Button sx={{ borderRadius: 'lg' }}>Зарегистрироваться</Button>
-        </Stack>
-      </Box>
+      <ColorShemeToggle />
 
       <Box sx={{ display: { xs: 'block', md: 'none', lg: 'none' } }}>
         <ColorShemeToggle />
