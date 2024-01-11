@@ -169,7 +169,7 @@ export const Welcome = () => {
 
       <Box
         sx={(theme) => ({
-          background: `linear-gradient(180deg,#ffffff 0%,#dcacff 18.008868243243246%,${theme.vars.palette.primary[300]} 54.177224099099085%,${theme.vars.palette.primary[500]} 68.34318693693693%, white 100%);`,
+          background: `linear-gradient(180deg,#ffffff 0%,#dcacff 18.008868243243246%,${theme.vars.palette.primary[300]} 54.177224099099085%,${theme.vars.palette.primary[500]} 68.34318693693693%, #ffffff 100%);`,
         })}
       >
         <Container>

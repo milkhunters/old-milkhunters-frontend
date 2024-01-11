@@ -13,13 +13,18 @@ import {
   ModalClose,
   Divider,
   useColorScheme,
+  ListItemContent,
+  ListItemDecorator,
 } from '@mui/joy';
 
 import { Sun } from 'lucide-react';
 import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
+import { LayoutGrid } from 'lucide-react';
 
 import { useLocation, NavLink } from 'react-router-dom';
+import { Logo } from './Logo';
+import { Icon } from '@/components/Elements/Icon';
 
 const ColorShemeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -45,10 +50,15 @@ const ColorShemeToggle = () => {
 
 export const Header = () => {
   const menuItems = [
-    { name: 'Продукты', to: '/products', select: [{ name: 'ShortLink', to: 'short' }] },
-    { name: 'Блог', to: '/articles' },
-    { name: 'Команда', to: '/team' },
-    { name: 'О нас', to: '/about' },
+    {
+      name: 'Продукты',
+      to: '/products',
+      icon: 'LayoutGrid',
+      select: [{ name: 'ShortLink', to: 'short' }],
+    },
+    { name: 'Блог', to: '/articles', icon: 'Newspaper' },
+    { name: 'Команда', to: '/team', icon: 'UsersRound' },
+    { name: 'О нас', to: '/about', icon: 'Building2' },
   ];
 
   const location = useLocation();
@@ -67,21 +77,7 @@ export const Header = () => {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <NavLink style={{ textDecoration: 'none' }} to="/">
-          <Typography
-            sx={{
-              dislplay: 'flex',
-              fontSize: { xs: '23px', md: '25px', lg: '27px' },
-              color: 'text.secondary',
-              fontWeight: '600',
-              fontFamily: 'Poppins',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            milk
-            <Typography sx={{ color: 'text.primary' }}>hunters</Typography>
-          </Typography>
-        </NavLink>
+        <Logo />
       </Box>
 
       <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'flex' } }}>
@@ -126,12 +122,15 @@ export const Header = () => {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              gap: 0.7,
-              ml: 'auto',
+              justifyContent: 'space-between',
+              mx: 2,
               mt: 1,
-              mr: 2,
             }}
           >
+            <Box onClick={drawerClose}>
+              <Logo />
+            </Box>
+
             <ModalClose id="close-icon" sx={{ position: 'initial' }} />
           </Box>
 
@@ -147,15 +146,16 @@ export const Header = () => {
               return (
                 <Box key={item.to}>
                   <Divider />
-                  <ListItem key={item.to}>
-                    <NavLink style={{ textDecoration: 'none' }} to={item.to}>
-                      <ListItemButton sx={{ borderRadius: '12px' }}>
-                        <Typography fontSize="15px" fontWeight="600" sx={{ color: 'black' }}>
-                          {item.name}
-                        </Typography>
+                  <NavLink onClick={drawerClose} style={{ textDecoration: 'none' }} to={item.to}>
+                    <ListItem key={item.to}>
+                      <ListItemButton>
+                        <ListItemDecorator>
+                          <Icon name={item.icon} />
+                        </ListItemDecorator>
+                        <ListItemContent>{item.name}</ListItemContent>
                       </ListItemButton>
-                    </NavLink>
-                  </ListItem>
+                    </ListItem>
+                  </NavLink>
                 </Box>
               );
             })}

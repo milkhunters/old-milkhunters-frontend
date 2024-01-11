@@ -16,7 +16,8 @@ import { Github } from 'lucide-react';
 import { SendHorizontal } from 'lucide-react';
 
 import { Container } from '../Container';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Logo } from './Logo';
 
 const GITHUB_URL = 'https://github.com/milkhunters';
 
@@ -27,7 +28,7 @@ export const Footer = () => {
         invertedColors
         sx={{
           flexGrow: 1,
-          p: 2,
+          py: 2,
           borderRadius: { xs: 0, sm: 'sm' },
         }}
       >
@@ -39,8 +40,8 @@ export const Footer = () => {
           </IconButton>
 
           <Input
-            variant="soft"
-            placeholder="Type in your email"
+            variant="outlined"
+            placeholder="Отсались вопросы?"
             type="email"
             name="email"
             endDecorator={
@@ -72,21 +73,7 @@ export const Footer = () => {
             }}
           >
             <CardContent>
-              <NavLink style={{ textDecoration: 'none' }} to="/">
-                <Typography
-                  sx={{
-                    dislplay: 'flex',
-                    fontSize: { xs: '23px', md: '25px', lg: '27px' },
-                    color: 'text.secondary',
-                    fontWeight: '600',
-                    fontFamily: 'Poppins',
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  milk
-                  <Typography sx={{ color: 'text.primary' }}>hunters</Typography>
-                </Typography>
-              </NavLink>
+              <Logo />
               <Typography>Делаем мир лучше...</Typography>
             </CardContent>
           </Card>
