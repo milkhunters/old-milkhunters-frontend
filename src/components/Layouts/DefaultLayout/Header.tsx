@@ -15,13 +15,12 @@ import {
   ListItemDecorator,
 } from '@mui/joy';
 
-import { Sun } from 'lucide-react';
+import { Building2, LayoutGrid, Newspaper, Sun, UsersRound } from 'lucide-react';
 import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 
 import { useLocation, NavLink } from 'react-router-dom';
 import { Logo } from './Logo';
-import { Icon } from '@/components/Elements/Icon';
 
 const ColorShemeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -50,12 +49,12 @@ export const Header = () => {
     {
       name: 'Продукты',
       to: '/products',
-      icon: 'LayoutGrid',
+      icon: <LayoutGrid />,
       select: [{ name: 'ShortLink', to: 'short' }],
     },
-    { name: 'Блог', to: '/articles', icon: 'Newspaper' },
-    { name: 'Команда', to: '/team', icon: 'UsersRound' },
-    { name: 'О нас', to: '/about', icon: 'Building2' },
+    { name: 'Блог', to: '/articles', icon: <Newspaper /> },
+    { name: 'Команда', to: '/team', icon: <UsersRound /> },
+    { name: 'О нас', to: '/about', icon: <Building2 /> },
   ];
 
   const location = useLocation();
@@ -140,9 +139,7 @@ export const Header = () => {
                   <NavLink onClick={drawerClose} style={{ textDecoration: 'none' }} to={item.to}>
                     <ListItem key={item.to}>
                       <ListItemButton>
-                        <ListItemDecorator>
-                          <Icon name={item.icon} />
-                        </ListItemDecorator>
+                        <ListItemDecorator>{item.icon}</ListItemDecorator>
                         <ListItemContent
                           sx={{
                             py: 1,
