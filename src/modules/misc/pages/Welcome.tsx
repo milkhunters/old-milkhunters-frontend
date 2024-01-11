@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
-import { Backpack, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import Box from '@mui/joy/Box';
 import AspectRatio from '@mui/joy/AspectRatio';
 import { useNavigate } from 'react-router-dom';

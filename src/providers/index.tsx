@@ -10,16 +10,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
   return (
     <CssVarsProvider disableTransitionOnChange theme={theme}>
       <CssBaseline />
-      <GlobalStyles
-        styles={{
-          
-          i: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          },
-        }}
-      />
+      <GlobalStyles styles={{}} />
       <BrowserRouter>{children}</BrowserRouter>
     </CssVarsProvider>
   );
