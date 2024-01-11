@@ -99,7 +99,9 @@ export const Header = () => {
         </List>
       </Box>
 
-      <ColorShemeToggle />
+      <Box sx={{ display: { xs: 'none', md: 'block', lg: 'block' } }}>
+        <ColorShemeToggle />
+      </Box>
 
       <Box sx={{ display: { xs: 'block', md: 'none', lg: 'none' } }}>
         <ColorShemeToggle />
