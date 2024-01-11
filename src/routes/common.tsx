@@ -8,9 +8,9 @@ export const commonRoutes = [
     element: <MainLayout />,
     children: [
       { path: '', element: <Welcome /> },
-      { path: '/articles/*', element: <ArticleRoutes /> },
-      { path: '/team', element: <Team /> },
-      { path: '/about', element: <About /> },
+      { path: 'articles/*', element: <ArticleRoutes /> },
+      { path: 'team', element: <Team /> },
+      { path: 'about', element: <About /> },
       { path: '*', element: <NotFound /> },
     ],
   },
