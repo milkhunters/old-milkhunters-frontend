@@ -116,7 +116,7 @@ export const Header = () => {
         <IconButton sx={{ ml: '1em' }} color="primary" onClick={drawerOpen}>
           <Menu />
         </IconButton>
-        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="left">
+        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="top">
           <Box
             sx={{
               display: 'flex',
