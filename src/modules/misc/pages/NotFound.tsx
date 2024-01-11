@@ -1,6 +1,10 @@
 import { Container } from '@/components/Layouts/Container';
+
 import { Typography } from '@mui/joy';
 import Box from '@mui/joy/Box/Box';
+
+import notfound from '@/assets/404.svg';
+import notfound_mobile from '@/assets/404_mobile.svg';
 
 export const NotFound = () => {
   return (
@@ -15,11 +19,11 @@ export const NotFound = () => {
         }}
       >
         <Box sx={{ display: { xs: 'none', md: 'block', lg: 'block' } }}>
-          <img src="../../../../public/404.svg" alt="404" />
+          <img src={notfound} alt="404" />
         </Box>
 
         <Box sx={{ display: { xs: 'block', md: 'none', lg: 'none' } }}>
-          <img src="../../../../public/404_mobile.svg" alt="404" />
+          <img src={notfound_mobile} alt="404" />
         </Box>
 
         <Typography
