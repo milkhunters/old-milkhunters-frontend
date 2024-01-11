@@ -1,4 +1,4 @@
-import { MainLayout } from '@/components/Layouts/MainLayout';
+import { MainLayout } from '@/components/Layouts/DefaultLayout/MainLayout';
 import { ArticleRoutes } from '@/modules/artilces';
 import { About, NotFound, Team, Welcome } from '@/modules/misc';
 

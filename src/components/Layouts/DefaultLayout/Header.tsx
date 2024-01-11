@@ -1,42 +1,33 @@
+import { useModal } from '@/hooks/useModal';
+
 import {
   Box,
-  Button,
-  Divider,
-  Drawer,
-  IconButton,
+  Typography,
   List,
   ListItem,
   ListItemButton,
-  ModalClose,
   Stack,
-  Typography,
+  Button,
+  IconButton,
+  Drawer,
+  ModalClose,
+  Divider,
+  useColorScheme,
 } from '@mui/joy';
-import { useColorScheme } from '@mui/joy/styles';
-import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
-import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
-import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
-import Menu from '@mui/icons-material/Menu';
+import { Sun } from 'lucide-react';
+import { Moon } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
-import { useModal } from '@/hooks/useModal';
+import { useLocation, NavLink } from 'react-router-dom';
 
 const ColorShemeToggle = () => {
   const { mode, setMode } = useColorScheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <IconButton
       id="toggle-mode"
       size="md"
-      variant="soft"
       color="primary"
       onClick={() => {
         if (mode === 'light') setMode('dark');
@@ -44,16 +35,15 @@ const ColorShemeToggle = () => {
       }}
       sx={{
         borderRadius: '50%',
-        boxShadow: 'lg',
         height: 'auto',
       }}
     >
-      {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />}
+      {mode === 'light' ? <Sun /> : <Moon />}
     </IconButton>
   );
 };
 
-const Header = () => {
+export const Header = () => {
   const menuItems = [
     { name: 'Продукты', to: '/products', select: [{ name: 'ShortLink', to: 'short' }] },
     { name: 'Блог', to: '/articles' },
@@ -119,19 +109,19 @@ const Header = () => {
       <Box sx={{ display: { xs: 'none', md: 'flex', lg: 'flex' } }}>
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
           <ColorShemeToggle />
-          <Button variant="outlined" sx={{ borderRadius: '12px' }}>
+          <Button variant="outlined" sx={{ borderRadius: 'lg' }}>
             Войти
           </Button>
-          <Button sx={{ borderRadius: '12px' }}>Зарегистрироваться</Button>
+          <Button sx={{ borderRadius: 'lg' }}>Зарегистрироваться</Button>
         </Stack>
       </Box>
 
       <Box sx={{ display: { xs: 'block', md: 'none', lg: 'none' } }}>
         <ColorShemeToggle />
-        <IconButton sx={{ ml: '1em' }} variant="outlined" color="neutral" onClick={drawerOpen}>
+        <IconButton sx={{ ml: '1em' }} color="primary" onClick={drawerOpen}>
           <Menu />
         </IconButton>
-        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="top">
+        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="left">
           <Box
             sx={{
               display: 'flex',
@@ -155,7 +145,7 @@ const Header = () => {
           >
             {menuItems.map((item) => {
               return (
-                <>
+                <Box key={item.to}>
                   <Divider />
                   <ListItem key={item.to}>
                     <NavLink style={{ textDecoration: 'none' }} to={item.to}>
@@ -166,43 +156,12 @@ const Header = () => {
                       </ListItemButton>
                     </NavLink>
                   </ListItem>
-                </>
+                </Box>
               );
             })}
           </List>
         </Drawer>
       </Box>
-    </Box>
-  );
-};
-
-const Footer = () => {
-  return (
-    <Box
-      sx={{
-        width: { xs: '95%', md: '95%', lg: '1200px' },
-        height: 'auto',
-        margin: '0 auto',
-      }}
-    >
-      Footer
-    </Box>
-  );
-};
-
-export const MainLayout = () => {
-  return (
-    <Box
-      sx={{
-        height: 'auto',
-        width: '100vw',
-      }}
-    >
-      <Header />
-      <Divider />
-      <Outlet />
-      <Divider />
-      <Footer />
     </Box>
   );
 };

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
-import ArrowForward from '@mui/icons-material/ArrowForward';
+import { Backpack, MoveRight } from 'lucide-react';
 import Box from '@mui/joy/Box';
 import AspectRatio from '@mui/joy/AspectRatio';
 import { useNavigate } from 'react-router-dom';
@@ -63,14 +63,14 @@ const TwoSidedLayout = ({
             '--AspectRatio-maxHeight': '520px',
             '--AspectRatio-minHeight': '400px',
           },
-          borderRadius: 'sm',
+          borderRadius: 'lg',
           bgcolor: 'background.level2',
           flexBasis: '50%',
         })}
       >
         <img
-          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXQlMjB0ZWFtfGVufDB8fDB8fHww"
-          alt=""
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGl0JTIwdGVhbXxlbnwwfHwwfHx8MA%3D%3D"
+          alt="Welcome Img"
         />
       </AspectRatio>
     </Box>
@@ -141,8 +141,7 @@ export const Welcome = () => {
             fontWeight="xl"
             fontSize="clamp(1.875rem, 1.3636rem + 2.1818vw, 3rem)"
           >
-            Мы - команда энтузиастов, объединенных общей страстью к созданию и воплощению
-            IT-решений.
+            Мы - команда энтузиастов, объединенных общей страстью к созданию и воплощению IT-решений
           </Typography>
           <Typography fontSize="lg" textColor="text.secondary" lineHeight="lg">
             Войдите в свой аккаунт, чтобы продолжить работу с milkhunters
@@ -150,8 +149,8 @@ export const Welcome = () => {
           <Button
             onClick={() => navigate('/auth/login')}
             size="lg"
-            endDecorator={<ArrowForward fontSize="small" />}
-            sx={{ borderRadius: '12px' }}
+            endDecorator={<MoveRight />}
+            sx={{ borderRadius: 'lg' }}
           >
             Войти в аккаунт
           </Button>
@@ -166,37 +165,54 @@ export const Welcome = () => {
             }}
           ></Typography>
         </TwoSidedLayout>
-        <Stack
-          direction={{ sm: 'column', md: 'row', lg: 'row' }}
-          justifyContent="center"
-          alignItems="center"
-          spacing={3}
-          flexWrap="wrap"
-          useFlexGap
-        >
-          {cards.map((card) => {
-            return (
-              <Card
-                sx={{
-                  width: { sm: '100%', md: '31.5%', lg: '32%' },
-                  height: '20em',
-                  border: '1px solid #e1e1e8',
-                  borderRadius: '20px',
-                  background: '#f9f9fd',
-                }}
-                variant="soft"
-              >
-                <CardContent sx={{ p: 2 }}>
-                  <Typography textColor="text.secondary" level="h3" fontWeight="700">
-                    {card.title}
-                  </Typography>
-                  <Typography>{card.description}</Typography>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Stack>
       </Container>
+
+      <Box
+        sx={(theme) => ({
+          background: `linear-gradient(180deg,#ffffff 0%,#dcacff 28.008868243243246%,${theme.vars.palette.primary[400]} 54.177224099099085%,#2b2883 78.34318693693693%,#0c0c0c 100%);`,
+        })}
+      >
+        <Container>
+          <Stack
+            direction={{ sm: 'column', md: 'row', lg: 'row' }}
+            justifyContent="center"
+            alignItems="center"
+            spacing={3}
+            flexWrap="wrap"
+            useFlexGap
+            sx={{ py: 3 }}
+          >
+            {cards.map((card) => {
+              return (
+                <Card
+                  key={card.id}
+                  sx={{
+                    width: { sm: '100%', md: '31.5%', lg: '32%' },
+                    height: { sm: 'auto', md: '20em' },
+                    my: '0.7em',
+                    border: '1px solid #e1e1e8',
+                    borderRadius: 'lg',
+                    background: '#f9f9fd',
+                  }}
+                  variant="soft"
+                >
+                  <CardContent sx={{ p: 1 }}>
+                    <Typography
+                      sx={{ fontSize: { sm: 'sm', md: 'lg', lg: 'xl' } }}
+                      textColor="text.secondary"
+                      level="h3"
+                      fontWeight="700"
+                    >
+                      {card.title}
+                    </Typography>
+                    <Typography>{card.description}</Typography>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </Stack>
+        </Container>
+      </Box>
     </Box>
   );
 };

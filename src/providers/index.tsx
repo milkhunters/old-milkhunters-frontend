@@ -12,6 +12,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       <CssBaseline />
       <GlobalStyles
         styles={{
+          
           i: {
             display: 'flex',
             justifyContent: 'center',

@@ -1,4 +1,4 @@
-import { AuthLayout } from '@/components/Layouts/AuthLayout';
+import { AuthLayout } from '@/components/Layouts/AuthLayout/AuthLayout';
 import { ConfirmEmailForm } from '../components/ConfirmEmail';
 
 export const ConfirmEmail = () => {

@@ -1,15 +1,15 @@
 import Box from '@mui/joy/Box/Box';
 
-export const Container = ({ children }: React.PropsWithChildren) => {
+export const Footer = () => {
   return (
     <Box
       sx={{
         width: { xs: '95%', md: '95%', lg: '1200px' },
-        height: '100%',
+        height: 'auto',
         margin: '0 auto',
       }}
     >
-      {children}
+      Footer
     </Box>
   );
 };
