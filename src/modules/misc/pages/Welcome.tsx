@@ -1,12 +1,15 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
-import { MoveRight } from 'lucide-react';
 import Box from '@mui/joy/Box';
 import AspectRatio from '@mui/joy/AspectRatio';
-import { useNavigate } from 'react-router-dom';
-import { Container } from '@/components/Layouts/Container';
 import { Card, CardContent, Stack } from '@mui/joy';
+
+import { MoveRight } from 'lucide-react';
+
+import { Container } from '@/components/Layouts/Container';
 
 const TwoSidedLayout = ({
   children,

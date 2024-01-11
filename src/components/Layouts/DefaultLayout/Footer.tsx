@@ -43,7 +43,6 @@ export const Footer = () => {
             variant="outlined"
             placeholder="Отсались вопросы?"
             type="email"
-            name="email"
             endDecorator={
               <IconButton variant="soft" aria-label="subscribe">
                 <SendHorizontal />
