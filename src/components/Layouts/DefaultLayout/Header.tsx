@@ -20,7 +20,6 @@ import {
 import { Sun } from 'lucide-react';
 import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
-import { LayoutGrid } from 'lucide-react';
 
 import { useLocation, NavLink } from 'react-router-dom';
 import { Logo } from './Logo';
