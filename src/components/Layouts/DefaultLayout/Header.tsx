@@ -155,7 +155,7 @@ export const Header = () => {
                           sx={{
                             py: 0.72,
                             fontSize: 'lg',
-                            fontWeight: 'lg',
+                            fontWeight: 'md',
                             letterSpacing: '-0.03em',
                           }}
                         >
