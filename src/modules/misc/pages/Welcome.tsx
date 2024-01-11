@@ -11,6 +11,8 @@ import { MoveRight } from 'lucide-react';
 
 import { Container } from '@/components/Layouts/Container';
 
+import team2 from '@/assets/team2.png';
+
 const TwoSidedLayout = ({
   children,
   reversed,
@@ -55,7 +57,6 @@ const TwoSidedLayout = ({
       </Box>
       <AspectRatio
         ratio={600 / 520}
-        variant="outlined"
         maxHeight={300}
         sx={(theme) => ({
           minWidth: 300,
@@ -67,14 +68,10 @@ const TwoSidedLayout = ({
             '--AspectRatio-minHeight': '400px',
           },
           borderRadius: 'lg',
-          bgcolor: 'background.level2',
           flexBasis: '50%',
         })}
       >
-        <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGl0JTIwdGVhbXxlbnwwfHwwfHx8MA%3D%3D"
-          alt="Welcome Img"
-        />
+        <img src={team2} alt="Welcome Img" />
       </AspectRatio>
     </Box>
   );
