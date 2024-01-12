@@ -78,7 +78,7 @@ export const About = () => {
           level="title-md"
           fontWeight="700"
           fontSize="clamp(1.875rem, 1.3636rem + 2.1818vw, 4rem)"
-          sx={{ mt: 10, letterSpacing: '-0.04em' }}
+          sx={{ my: 2, letterSpacing: '-0.04em' }}
         >
           Добро пожаловать в команду{' '}
           <Typography
