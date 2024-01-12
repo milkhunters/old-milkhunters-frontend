@@ -218,7 +218,7 @@ export const Team = () => {
               ))}
             </List>
             <Button size="sm" variant="plain" sx={{ px: 1, mt: 1 }}>
-              Expand
+              Развернуть
             </Button>
             <Divider component="div" sx={{ my: 2 }} />
             <Typography level="title-sm">Skills tags:</Typography>

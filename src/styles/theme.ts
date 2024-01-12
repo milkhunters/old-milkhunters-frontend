@@ -20,7 +20,7 @@ export default extendTheme({
         },
         text: {
           primary: '#4e46e5',
-          secondary: '#000e5c',
+          secondary: '#000',
         },
       },
     },
