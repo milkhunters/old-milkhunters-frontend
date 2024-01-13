@@ -10,6 +10,8 @@ import {
 } from '@mui/joy';
 import Box from '@mui/joy/Box/Box';
 
+import about from '@/assets/about.png';
+
 export const About = () => {
   const events = [
     {
@@ -78,7 +80,7 @@ export const About = () => {
           level="title-md"
           fontWeight="700"
           fontSize="clamp(1.875rem, 1.3636rem + 2.1818vw, 4rem)"
-          sx={{ mt: 10, letterSpacing: '-0.04em' }}
+          sx={{ my: 2, letterSpacing: '-0.04em' }}
         >
           Добро пожаловать в команду{' '}
           <Typography
@@ -95,6 +97,18 @@ export const About = () => {
             <Typography sx={{ color: 'text.primary' }}>hunters</Typography>
           </Typography>
         </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Box sx={{ display: { xs: 'none', md: 'block', lg: 'block' } }}>
+            <img src={about} alt="about" />
+          </Box>
+        </Box>
         <Typography
           textColor="text.tertiary"
           level="body-sm"
@@ -109,7 +123,7 @@ export const About = () => {
         </Typography>
 
         <Chip variant="outlined" size="lg" sx={{ my: 2 }}>
-          <Typography fontWeight="lg"> События</Typography>
+          <Typography fontWeight="lg">События</Typography>
         </Chip>
 
         <List sx={{ '--ListItemDecorator-size': '50px', gap: 4 }}>

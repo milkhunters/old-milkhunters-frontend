@@ -107,45 +107,45 @@ export const Header = () => {
         <IconButton sx={{ ml: '1em' }} color="primary" onClick={drawerOpen}>
           <Menu />
         </IconButton>
-        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="left">
+        <Drawer size="sm" open={isDrawer} onClose={drawerClose} anchor="top">
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
               mx: 2,
-              mt: 1,
+              my: 1,
             }}
           >
             <Box onClick={drawerClose}>
               <Logo />
             </Box>
 
-            <ModalClose id="close-icon" sx={{ position: 'initial' }} />
+            <ModalClose variant="outlined" id="close-icon" sx={{ position: 'initial' }} />
           </Box>
+
+          <Divider />
 
           <List
             size="lg"
             component="nav"
             sx={{
               flex: 'none',
-              fontSize: 'xl',
+              fontSize: 'xs',
             }}
           >
             {menuItems.map((item) => {
               return (
                 <Box key={item.to}>
-                  <Divider />
                   <NavLink onClick={drawerClose} style={{ textDecoration: 'none' }} to={item.to}>
                     <ListItem key={item.to}>
                       <ListItemButton>
-                        <ListItemDecorator>{item.icon}</ListItemDecorator>
+                        <ListItemDecorator sx={{ pt: 1 }}>{item.icon}</ListItemDecorator>
                         <ListItemContent
                           sx={{
-                            py: 1,
+                            pt: 1,
                             fontSize: 'lg',
                             fontWeight: 'md',
-                            letterSpacing: '-0.01em',
                           }}
                         >
                           {item.name}

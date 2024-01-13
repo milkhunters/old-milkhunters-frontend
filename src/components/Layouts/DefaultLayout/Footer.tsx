@@ -12,6 +12,8 @@ import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 
 import { Github } from 'lucide-react';
+import { Gitlab } from 'lucide-react';
+import { Youtube } from 'lucide-react';
 
 import { SendHorizontal } from 'lucide-react';
 
@@ -36,6 +38,16 @@ export const Footer = () => {
           <IconButton variant="plain">
             <Link to={GITHUB_URL}>
               <Github color="black" />
+            </Link>
+          </IconButton>
+          <IconButton variant="plain">
+            <Link to="">
+              <Gitlab color="black" />
+            </Link>
+          </IconButton>
+          <IconButton variant="plain">
+            <Link to="">
+              <Youtube color="black" />
             </Link>
           </IconButton>
 

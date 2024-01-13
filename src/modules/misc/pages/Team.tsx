@@ -221,7 +221,7 @@ export const Team = () => {
               Развернуть
             </Button>
             <Divider component="div" sx={{ my: 2 }} />
-            <Typography level="title-sm">Skills tags:</Typography>
+            <Typography level="title-sm"></Typography>
             <Box sx={{ mt: 1.5, display: 'flex', gap: 1 }}>
               {person.skills.map((skill, skillIndex) => (
                 <Chip key={skillIndex} variant="outlined" color="neutral" size="sm">
