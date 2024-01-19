@@ -127,7 +127,7 @@ export const About = () => {
         </Chip>
 
         <List sx={{ '--ListItemDecorator-size': '50px', gap: 4 }}>
-          {events?.map((event, eventIndex) => (
+          {events.map((event, eventIndex) => (
             <ListItem key={eventIndex} sx={{ alignItems: 'flex-start' }}>
               <ListItemDecorator>
                 <Avatar src={event.logo} sx={{ '--Avatar-size': '30px' }} />

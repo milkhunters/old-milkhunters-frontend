@@ -85,9 +85,9 @@ export const Header = () => {
                 <NavLink style={{ textDecoration: 'none' }} to={item.to}>
                   <ListItemButton
                     variant={isSelected ? 'soft' : 'plain'}
-                    sx={{ borderRadius: '12px' }}
+                    sx={{ borderRadius: 'lg' }}
                   >
-                    <Typography fontSize="15px" fontWeight="500">
+                    <Typography fontSize="md" fontWeight="500">
                       {item.name}
                     </Typography>
                   </ListItemButton>
