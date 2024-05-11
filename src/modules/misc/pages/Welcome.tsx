@@ -147,7 +147,7 @@ export const Welcome = () => {
             Войдите в свой аккаунт, чтобы продолжить работу с milkhunters
           </Typography>
           <Button
-            onClick={() => navigate('/auth/login')}
+            onClick={() => navigate('/')}
             size="lg"
             endDecorator={<MoveRight />}
             sx={{ borderRadius: 'lg' }}
