@@ -15,7 +15,7 @@ import {
   ListItemDecorator,
 } from '@mui/joy';
 
-import { Building2, LayoutGrid, Newspaper, Sun, UsersRound } from 'lucide-react';
+import { Building2, Sun, UsersRound } from 'lucide-react';
 import { Moon } from 'lucide-react';
 import { Menu } from 'lucide-react';
 
@@ -46,13 +46,6 @@ const ColorShemeToggle = () => {
 
 export const Header = () => {
   const menuItems = [
-    {
-      name: 'Продукты',
-      to: '/products',
-      icon: <LayoutGrid />,
-      select: [{ name: 'ShortLink', to: 'short' }],
-    },
-    { name: 'Блог', to: '/articles', icon: <Newspaper /> },
     { name: 'Команда', to: '/team', icon: <UsersRound /> },
     { name: 'О нас', to: '/about', icon: <Building2 /> },
   ];
